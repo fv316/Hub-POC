@@ -1,4 +1,4 @@
-import { Stack } from "@chakra-ui/react";
+import { VStack } from "@chakra-ui/react";
 import Card from "../Card/index";
 
 const cardItems = [
@@ -15,13 +15,13 @@ const cardItems = [
     id: 1,
   },
   {
-    name: "E-commerce Guide",
+    name: "E-Commerce Guide",
     description:
       "Sign up for acquiring with a couple of clicks. No need for a long process.",
     id: 2,
   },
   {
-    name: "Points Collection",
+    name: "Point Collection",
     description:
       "Sign up for acquiring with a couple of clicks. No need for a long process.",
     id: 3,
@@ -30,7 +30,7 @@ const cardItems = [
 
 const Body = () => {
   return (
-    <Stack>
+    <VStack spacing="32px" padding="32px">
       {cardItems.map((card) => (
         <Card
           name={card.name}
@@ -38,7 +38,7 @@ const Body = () => {
           key={card.id}
         ></Card>
       ))}
-    </Stack>
+    </VStack>
   );
 };
 

@@ -1,16 +1,20 @@
-import { VStack, Text, Heading, Flex } from "@chakra-ui/react";
+import { VStack, Text, Heading, Box } from "@chakra-ui/react";
 
 const Card = ({ name, description, key }) => {
   return (
-    <VStack alignItems="flex-start" p="0px" maxWidth="300px">
-      <Flex
+    <VStack alignItems="flex-start" p="0px" maxWidth="300px" spacing="0px">
+      <Box
         bg="brand.blue.500"
         border="1px solid"
         boxSizing="border-box"
         borderRadius="10px 10px 0px 0px"
         height="12px"
         alignSelf="stretch"
-      ></Flex>
+        flex="none"
+        order={0}
+        flexGrow={0}
+        margin="0px 0px"
+      ></Box>
       <VStack
         bg="brand.gray"
         alignItems="flex-start"
@@ -20,10 +24,15 @@ const Card = ({ name, description, key }) => {
         borderRadius="0px 0px 10px 10px"
         alignSelf="stretch"
         flexGrow={1}
-        margin="32px"
+        margin="0px 0px"
         order={1}
       >
-        <Heading size="24px" color="petrol" font-weight={600}>
+        <Heading
+          size="24px"
+          color="petrol"
+          font-weight={600}
+          textDecorationLine="underline"
+        >
           {name}
         </Heading>
         <Text color="petrol" font-weight={600}>
