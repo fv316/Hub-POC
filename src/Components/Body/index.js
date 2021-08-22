@@ -1,5 +1,5 @@
-import { VStack } from "@chakra-ui/react";
-import Card from "../Card/index";
+import { SimpleGrid } from "@chakra-ui/react";
+import Card from "../Card";
 
 const cardItems = [
   {
@@ -30,7 +30,7 @@ const cardItems = [
 
 const Body = () => {
   return (
-    <VStack spacing="32px" padding="32px">
+    <SimpleGrid columns={2} spacing={10} padding="32px" minChildWidth="200px">
       {cardItems.map((card) => (
         <Card
           name={card.name}
@@ -38,7 +38,7 @@ const Body = () => {
           key={card.id}
         ></Card>
       ))}
-    </VStack>
+    </SimpleGrid>
   );
 };
 

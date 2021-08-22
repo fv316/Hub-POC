@@ -1,6 +1,6 @@
 import { VStack, Text, Heading, Box } from "@chakra-ui/react";
 
-const Card = ({ name, description, key }) => {
+const CardLong = ({ name, description, key }) => {
   return (
     <VStack alignItems="flex-start" p="0px" maxWidth="300px" spacing="0px">
       <Box
@@ -19,7 +19,7 @@ const Card = ({ name, description, key }) => {
         bg="brand.gray"
         alignItems="flex-start"
         p="16px"
-        border="1px solid"
+        border="1px solida"
         boxSizing="border-box"
         borderRadius="0px 0px 10px 10px"
         alignSelf="stretch"
@@ -38,4 +38,4 @@ const Card = ({ name, description, key }) => {
   );
 };
 
-export default Card;
+export default CardLong;
