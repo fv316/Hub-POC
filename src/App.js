@@ -1,4 +1,4 @@
-import { ChakraProvider, HStack, VStack, Box, Grid } from "@chakra-ui/react";
+import { ChakraProvider, HStack, VStack } from "@chakra-ui/react";
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 import Banner from "./Components/Banner";
@@ -7,7 +7,7 @@ import Sidebar from "./Components/Sidebar";
 import { extendTheme } from "@chakra-ui/react";
 import "focus-visible/dist/focus-visible";
 import "@fontsource/manrope";
-// import { API } from "@stoplight/elements";
+import { API } from "@stoplight/elements";
 import "@stoplight/elements/styles.min.css";
 
 // if this gets long export this to another folder with subfiles
@@ -88,6 +88,7 @@ const App = () => {
           <Banner></Banner>
           <Body></Body>
           <Footer></Footer>
+          <API apiDescriptionUrl="https://stoplight.io/api/v1/projects/salt/global-data/nodes/docs/openapi.company-management.json?branch=master" />{" "}
         </VStack>
       </HStack>
     </ChakraProvider>

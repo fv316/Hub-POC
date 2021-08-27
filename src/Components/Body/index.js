@@ -30,7 +30,13 @@ const cardItems = [
 
 const Body = () => {
   return (
-    <SimpleGrid columns={2} spacing={10} padding="32px" minChildWidth="200px">
+    <SimpleGrid
+      columns={2}
+      spacing={10}
+      padding="32px"
+      minChildWidth="200px"
+      alignSelf="stretch"
+    >
       {cardItems.map((card) => (
         <Card
           name={card.name}

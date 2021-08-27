@@ -8,7 +8,7 @@ const menuItems = [
 
 const Footer = () => {
   return (
-    <HStack p="32px" position="sticky" top={0} bg="black">
+    <HStack p="32px" position="sticky" top={0} bg="black" alignSelf="stretch">
       <LogoAlternative width="150px" color="white" />
       <HStack flexGrow={1} justifyContent="flex-end" spacing="32px">
         {menuItems.map((item) => (
