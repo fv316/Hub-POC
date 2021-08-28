@@ -20,6 +20,12 @@ const theme = extendTheme({
       },
     },
   },
+  fontWeights: {
+    normal: 400,
+    medium: 500,
+    bold: 700,
+    extrabold: 1000,
+  },
   colors: {
     brand: {
       black: "#000",
@@ -51,11 +57,25 @@ const theme = extendTheme({
       baseStyle: {
         boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.05)",
         borderRadius: "full",
+        background: "brand.petrol",
         color: "white",
+      },
+      variants: {
+        solid: {
+          borderRadius: "full",
+          borderColor: "brand.petrol",
+          bg: "brand.petrol",
+        },
+        outline: {
+          bg: "white",
+          borderRadius: "full",
+          borderColor: "brand.petrol",
+          color: "brand.metal",
+        },
       },
       sizes: {
         md: {
-          padding: "15px 30px",
+          padding: "12px 24px",
         },
       },
     },
@@ -87,8 +107,6 @@ const App = () => {
           <Navbar></Navbar>
           <Banner></Banner>
           <Body></Body>
-          <Footer></Footer>
-          <API apiDescriptionUrl="https://stoplight.io/api/v1/projects/salt/global-data/nodes/docs/openapi.company-management.json?branch=master" />{" "}
         </VStack>
       </HStack>
     </ChakraProvider>
