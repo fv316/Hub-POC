@@ -17,8 +17,8 @@ const Logo = ({ width, color = "currentColor" }) => (
   </svg>
 );
 
-const LogoAlternative = ({ width, color = "currentColor" }) => (
-  <Heading fontWeight={800} width={width} color={color}>
+const LogoAlternative = ({ width, color = "currentColor", ...props }) => (
+  <Heading fontWeight={800} width={width} color={color} {...props}>
     Salt
   </Heading>
 );

@@ -23,8 +23,9 @@ const theme = extendTheme({
   fontWeights: {
     normal: 400,
     medium: 500,
+    semibold: 600,
     bold: 700,
-    extrabold: 1000,
+    extrabold: 900,
   },
   colors: {
     brand: {
