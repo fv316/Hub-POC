@@ -31,6 +31,7 @@ const Card = ({ name, description, key }) => {
         fontFamily="Hack"
         textAlign="right"
         alignSelf="stretch"
+        fontSize="14px"
       >
         Get Started &gt;
       </Text>

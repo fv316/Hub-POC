@@ -48,11 +48,23 @@ const longCardItems = [
       "Begin collecting and redeeming loyatly points to attract more clients to your shops.",
     id: 3,
   },
+  {
+    name: "Loans",
+    description:
+      "Starting accepting installements or unlock funding for your business.",
+    id: 4,
+  },
+  {
+    name: "Accounting Connections",
+    description:
+      "Stream all of the accounting data directly to your personal platform.",
+    id: 5,
+  },
 ];
 
 const Body = () => {
   return (
-    <VStack alignItems="flex-start">
+    <VStack alignItems="flex-start" alignSelf="stretch">
       <HStack
         spacing="32px"
         p="32px"
@@ -69,7 +81,7 @@ const Body = () => {
         ))}
       </HStack>
 
-      <VStack p="24px 64px" alignItems="flex-start" alignSelf="stretch">
+      <VStack p="12px 64px" alignItems="flex-start" alignSelf="stretch">
         <Heading size="lg">
           Salt <b>Products</b>
         </Heading>
@@ -80,11 +92,11 @@ const Body = () => {
 
       <SimpleGrid
         columns={2}
-        padding="32px"
         spacing="32px 64px"
-        p="32px"
+        p="12px 64px"
         alignItems="center"
         alignSelf="stretch"
+        minChildWidth="400px"
       >
         {longCardItems.map((card) => (
           <LongCard

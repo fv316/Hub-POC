@@ -1,4 +1,4 @@
-import { VStack, Flex, Text, Divider, HStack } from "@chakra-ui/react";
+import { VStack, Flex, Text, Divider } from "@chakra-ui/react";
 import { Logo } from "../Logo";
 
 const TopSideItems = [

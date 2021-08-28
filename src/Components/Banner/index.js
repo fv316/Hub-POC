@@ -4,7 +4,7 @@ const Banner = () => {
   return (
     <VStack
       alignItems="flex-start"
-      p="64px 96px 64px 64px"
+      p="64px 96px"
       bg="blue.50"
       alignSelf="stretch"
     >
@@ -13,7 +13,7 @@ const Banner = () => {
       </Heading>
       <Text>
         Here to help you make integrations <b>simple</b>. <br /> Find all the
-        documentation that you need to <b>revoltionize</b> your business.
+        documentation that you need to <b>revolutionise</b> your business.
       </Text>
     </VStack>
   );
