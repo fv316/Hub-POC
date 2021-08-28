@@ -1,39 +1,48 @@
-import { VStack, Text, Heading, Box } from "@chakra-ui/react";
+import { VStack, Text, Heading } from "@chakra-ui/react";
 
 const Card = ({ name, description, key }) => {
   return (
-    <VStack alignItems="flex-start" p="0px" maxWidth="300px" spacing="0px">
-      <Box
-        bg="brand.blue.500"
-        border="1px solid"
-        boxSizing="border-box"
-        borderRadius="10px 10px 0px 0px"
-        height="12px"
+    <VStack
+      bg="brand.petrol"
+      p="24px"
+      boxShadow="0px 4px 4px rgba(0, 0, 0, 0.25)"
+      border="1px solid"
+      boxSizing="border-box"
+      borderRadius="15px"
+      alignSelf="stretch"
+      flexGrow={1}
+      margin="0px 0px"
+      alignItems="flex-start"
+      spacing="12px"
+      justifyContent="space-between"
+      h="210px"
+      w="280px"
+    >
+      <Heading
         alignSelf="stretch"
-        flex="none"
-        order={0}
-        flexGrow={0}
-        margin="0px 0px"
-      ></Box>
-      <VStack
-        bg="brand.gray"
-        alignItems="flex-start"
-        p="16px"
-        border="1px solid"
-        boxSizing="border-box"
-        borderRadius="0px 0px 10px 10px"
-        alignSelf="stretch"
-        flexGrow={1}
-        margin="0px 0px"
-        order={1}
+        fontSize="18px"
+        color="white"
+        fontWeight="bold"
       >
-        <Heading size="24px" color="petrol" font-weight={600}>
-          {name}
-        </Heading>
-        <Text color="petrol" font-weight={600}>
-          {description}
-        </Text>
-      </VStack>
+        {name}
+      </Heading>
+      <Text
+        alignSelf="stretch"
+        color="white"
+        fontWeight="normal"
+        fontSize="14px"
+      >
+        {description}
+      </Text>
+      <Text
+        fontWeight="normal"
+        color="brand.pink.300"
+        fontFamily="Hack"
+        textAlign="right"
+        alignSelf="stretch"
+      >
+        Get Started &gt;
+      </Text>
     </VStack>
   );
 };
