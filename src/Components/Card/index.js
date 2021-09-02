@@ -4,7 +4,7 @@ const Card = ({ name, description, key }) => {
   return (
     <VStack
       bg="brand.petrol"
-      p="24px"
+      p={{ base: "12px", md: "24px" }}
       boxShadow="0px 4px 4px rgba(0, 0, 0, 0.25)"
       borderRadius="15px"
       alignSelf="stretch"
@@ -14,6 +14,7 @@ const Card = ({ name, description, key }) => {
       justifyContent="space-between"
       minHeight="210px"
       maxWidth="360px"
+      // _hover={{ bg: "white", p: "50px" }}
     >
       <Heading
         alignSelf="stretch"

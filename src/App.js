@@ -1,14 +1,13 @@
 import { ChakraProvider, HStack, VStack } from "@chakra-ui/react";
 import Navbar from "./Components/Navbar";
-import Footer from "./Components/Footer";
 import Banner from "./Components/Banner";
 import Body from "./Components/Body";
 import Sidebar from "./Components/Sidebar";
 import { extendTheme } from "@chakra-ui/react";
 import "focus-visible/dist/focus-visible";
 import "@fontsource/manrope";
-import { API } from "@stoplight/elements";
-import "@stoplight/elements/styles.min.css";
+import { StoplightProject } from "@stoplight/elements-dev-portal";
+import "./stoplight.css";
 
 // if this gets long export this to another folder with subfiles
 const theme = extendTheme({
@@ -66,6 +65,16 @@ const theme = extendTheme({
           borderRadius: "full",
           borderColor: "brand.petrol",
           bg: "brand.petrol",
+          _hover: { bg: "blue" },
+          _active: {
+            bg: "green",
+            transform: "scale(0.98)",
+            borderColor: "red",
+          },
+          _focus: {
+            boxShadow:
+              "0 0 1px 2px rgba(88, 144, 255, .75), 0 1px 1px rgba(0, 0, 0, .15)",
+          },
         },
         outline: {
           bg: "white",
@@ -110,6 +119,10 @@ const App = () => {
           <Body></Body>
         </VStack>
       </HStack>
+      <StoplightProject
+        collapseTableOfContents="true"
+        projectId="cHJqOjM1Nzk5"
+      />
     </ChakraProvider>
   );
 };

@@ -21,10 +21,9 @@ const Sidebar = () => {
   return (
     <VStack
       alignSelf="stretch"
-      left="0px"
       top="0px"
       position="sticky"
-      minWidth="240px"
+      minWidth="300px"
       minHeight="100vh"
       maxHeight="100vh"
       bg="brand.petrol"
