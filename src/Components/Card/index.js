@@ -14,17 +14,18 @@ const Card = ({ name, description, key }) => {
       justifyContent="space-between"
       minHeight="210px"
       maxWidth="360px"
-      // _hover={{ bg: "white", p: "50px" }}
+      color="white"
+      _hover={{ bg: "white", color: "brand.petrol" }}
     >
       <Heading
         alignSelf="stretch"
-        fontSize="18px"
-        color="white"
-        fontWeight="bold"
+        fontSize="16px"
+        color="inherit"
+        fontWeight="semibold"
       >
         {name}
       </Heading>
-      <Text alignSelf="stretch" color="white" fontSize="14px">
+      <Text alignSelf="stretch" color="inherit" fontSize="14px">
         {description}
       </Text>
       <Text

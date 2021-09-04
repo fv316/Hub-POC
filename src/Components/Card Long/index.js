@@ -16,7 +16,7 @@ const LongCard = ({ name, description, key }) => {
     >
       <Heading
         alignSelf="stretch"
-        fontSize="18px"
+        fontSize="16px"
         color="brand.metal"
         fontWeight="bold"
       >

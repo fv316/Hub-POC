@@ -1,6 +1,8 @@
-import { HStack, Button } from "@chakra-ui/react";
+import { HStack, Button, Text } from "@chakra-ui/react";
+import { Logo } from "../Logo";
 
 const menuItems = [
+  { name: "Home", id: 4, variant: "solid" },
   { name: "Guides", id: 0, variant: "solid" },
   { name: "APIs", id: 1, variant: "solid" },
   { name: "Learn", id: 2, variant: "solid" },
@@ -9,10 +11,17 @@ const menuItems = [
 
 const Navbar = () => {
   return (
-    <HStack p="32px" position="sticky" bg="blue.50" top={0} alignSelf="stretch">
+    <HStack
+      p="32px"
+      position="sticky"
+      bg="brand.blue.500"
+      top={0}
+      alignSelf="stretch"
+    >
+      <Logo height="30px" color="white"></Logo>
       <HStack flexGrow={1} justifyContent="flex-end" spacing="32px">
         {menuItems.map((item) => (
-          <Button key={item.id} variant={item.variant} fontWeight="normal">
+          <Button key={item.id} variant={item.variant}>
             {item.name}
           </Button>
         ))}

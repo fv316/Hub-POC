@@ -64,8 +64,8 @@ const longCardItems = [
 
 const Body = () => {
   return (
-    <VStack alignSelf="stretch">
-      <SimpleGrid gap="32px" p="32px" columns={{ base: 1, md: 1, lg: 3 }}>
+    <VStack maxWidth="1175px">
+      <SimpleGrid gap="64px" columns={{ base: 1, md: 1, lg: 3 }}>
         {cardItems.map((card) => (
           <Card
             name={card.name}
@@ -75,9 +75,9 @@ const Body = () => {
         ))}
       </SimpleGrid>
 
-      <VStack p="12px 64px" alignItems="flex-start" alignSelf="stretch">
-        <Heading size="lg">
-          Salt <b>Products</b>
+      <VStack p="64px 0px" alignItems="flex-start" alignSelf="stretch">
+        <Heading fontSize="36px" fontWeight="extrabold">
+          Salt Products
         </Heading>
         <Text>
           The perfect products to make your company <b>boom</b>.
@@ -87,7 +87,6 @@ const Body = () => {
       <SimpleGrid
         columns={{ base: 1, lg: 2 }}
         gap="32px 64px"
-        p="12px 64px"
         alignSelf="center"
       >
         {longCardItems.map((card) => (

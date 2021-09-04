@@ -1,8 +1,8 @@
 import { Heading } from "@chakra-ui/react";
 
-const Logo = ({ width, color = "currentColor" }) => (
+const Logo = ({ height, color = "currentColor" }) => (
   <svg
-    width={width || "203px"}
+    height={height || "40px"}
     viewBox="0 0 203 57"
     xmlns="http://www.w3.org/2000/svg"
     fill={color}

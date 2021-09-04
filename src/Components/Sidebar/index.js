@@ -20,7 +20,6 @@ const BottomSideItems = [
 const Sidebar = () => {
   return (
     <VStack
-      alignSelf="stretch"
       top="0px"
       position="sticky"
       minWidth="300px"
@@ -41,7 +40,7 @@ const Sidebar = () => {
         <Divider h="0.5px" alignSelf="stretch" />
         <VStack p="12px" alignSelf="stretch" alignItems="flex-start">
           {TopSideItems.map((item) => (
-            <Text alignSelf="stretch" color="white">
+            <Text fontSize="13px" alignSelf="stretch" color="white">
               {item.name}
             </Text>
           ))}
@@ -49,7 +48,9 @@ const Sidebar = () => {
       </VStack>
       <VStack p="12px" alignSelf="stretch" alignItems="flex-start">
         {BottomSideItems.map((item) => (
-          <Text color="white">{item.name}</Text>
+          <Text fontSize="13px" color="white">
+            {item.name}
+          </Text>
         ))}
       </VStack>
     </VStack>

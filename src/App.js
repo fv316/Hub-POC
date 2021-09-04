@@ -5,7 +5,7 @@ import Body from "./Components/Body";
 import Sidebar from "./Components/Sidebar";
 import { extendTheme } from "@chakra-ui/react";
 import "focus-visible/dist/focus-visible";
-import "@fontsource/manrope";
+// import "@fontsource/manrope";
 import { StoplightProject } from "@stoplight/elements-dev-portal";
 import "./stoplight.css";
 
@@ -57,26 +57,35 @@ const theme = extendTheme({
       baseStyle: {
         boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.05)",
         borderRadius: "full",
-        background: "brand.petrol",
         color: "white",
       },
       variants: {
         solid: {
+          fontWeight: "normal",
+
+          fontSize: "13px",
           borderRadius: "full",
           borderColor: "brand.petrol",
           bg: "brand.petrol",
-          _hover: { bg: "blue" },
-          _active: {
-            bg: "green",
+          _hover: {
+            bg: "brand.pink.300",
             transform: "scale(0.98)",
-            borderColor: "red",
+            boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)",
+          },
+          _active: {
+            bg: "brand.pink.300",
+            transform: "scale(1.02)",
           },
           _focus: {
             boxShadow:
               "0 0 1px 2px rgba(88, 144, 255, .75), 0 1px 1px rgba(0, 0, 0, .15)",
+            bg: "brand.pink.300",
+            transform: "scale(1.02)",
           },
         },
         outline: {
+          fontSize: "13px",
+          fontWeight: "normal",
           bg: "white",
           borderRadius: "full",
           borderColor: "brand.petrol",
@@ -95,30 +104,35 @@ const theme = extendTheme({
 const App = () => {
   return (
     <ChakraProvider theme={theme}>
-      <HStack
-        alignItems="flex-start"
-        padding="0px"
+      <VStack
+        alignItems="center"
+        flexGrow={1}
+        display="flex"
+        height="100%"
+        width="100%"
         spacing="0px"
-        alignSelf="stretch"
-        w="full"
-        h="full"
       >
-        <Sidebar></Sidebar>
+        <Navbar></Navbar>
         <VStack
-          alignSelf="stretch"
-          flexGrow={1}
-          margin="0px 0px"
-          padding="0px"
-          display="flex"
-          flexDir="column"
-          alignItems="flex-start"
-          spacing="0px"
+          padding="64px 96px"
+          width="100%"
+          overflowX="hidden"
+          overflowY="auto"
+          bg="brand.blue.500"
         >
-          <Navbar></Navbar>
           <Banner></Banner>
+        </VStack>
+        <VStack
+          padding="64px 96px"
+          width="100%"
+          overflowX="hidden"
+          overflowY="auto"
+          p="16px 24px"
+          maxWidth="1500px"
+        >
           <Body></Body>
         </VStack>
-      </HStack>
+      </VStack>
       <StoplightProject
         collapseTableOfContents="true"
         projectId="cHJqOjM1Nzk5"
