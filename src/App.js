@@ -1,4 +1,4 @@
-import { ChakraProvider, HStack, VStack } from "@chakra-ui/react";
+import { ChakraProvider, Icon, VStack } from "@chakra-ui/react";
 import Navbar from "./Components/Navbar";
 import Banner from "./Components/Banner";
 import Body from "./Components/Body";
@@ -30,7 +30,7 @@ const theme = extendTheme({
     brand: {
       black: "#000",
       white: "#fff",
-      gray: "#F2F2ED",
+      gray: { salt: "#F2F2ED", stoplight: "#EBEEF4" },
       purple: {
         50: "#EDE8FB",
         400: "#7560E2",
@@ -121,6 +121,7 @@ const App = () => {
           bg="brand.blue.500"
         >
           <Banner></Banner>
+          <Icon src="../../Images/noun_application programming interface_2307579.svg.svg"></Icon>
         </VStack>
         <VStack
           padding="64px 96px"

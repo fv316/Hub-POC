@@ -1,6 +1,6 @@
-import { VStack, Text, Heading } from "@chakra-ui/react";
+import { VStack, Text, Heading, HStack, Icon } from "@chakra-ui/react";
 
-const LongCard = ({ name, description, key }) => {
+const LongCard = ({ name, description, svg, key }) => {
   return (
     <VStack
       p="24px"
@@ -22,18 +22,23 @@ const LongCard = ({ name, description, key }) => {
       >
         {name}
       </Heading>
-      <Text alignSelf="stretch" color="brand.metal" fontSize="14px">
-        {description}
-      </Text>
-      <Text
-        color="brand.pink.300"
-        fontFamily="Hack"
-        textAlign="right"
-        alignSelf="stretch"
-        fontSize="14px"
-      >
-        Start Learning &gt;
-      </Text>
+      <HStack>
+        <Icon path={svg}></Icon>
+        <VStack>
+          <Text alignSelf="stretch" color="brand.metal" fontSize="14px">
+            {description}
+          </Text>
+          <Text
+            color="brand.pink.300"
+            fontFamily="Hack"
+            textAlign="right"
+            alignSelf="stretch"
+            fontSize="14px"
+          >
+            Start Learning &gt;
+          </Text>
+        </VStack>
+      </HStack>
     </VStack>
   );
 };

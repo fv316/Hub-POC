@@ -43,13 +43,14 @@ const longCardItems = [
     id: 2,
   },
   {
-    name: "Point Collection",
+    name: "Identity",
     description:
       "Begin collecting and redeeming loyatly points to attract more clients to your shops.",
     id: 3,
+    svg: "src/Images/noun_Bunch of keys_1993195.svg",
   },
   {
-    name: "Loans",
+    name: "Security",
     description:
       "Starting accepting installements or unlock funding for your business.",
     id: 4,
@@ -59,6 +60,7 @@ const longCardItems = [
     description:
       "Stream all of the accounting data directly to your personal platform.",
     id: 5,
+    svg: "src/Images/noun_application programming interface_2307579.svg",
   },
 ];
 
@@ -70,6 +72,7 @@ const Body = () => {
           <Card
             name={card.name}
             description={card.description}
+            svg={card.svg}
             key={card.id}
           ></Card>
         ))}
@@ -93,6 +96,7 @@ const Body = () => {
           <LongCard
             name={card.name}
             description={card.description}
+            svg={card.svg}
             key={card.id}
           ></LongCard>
         ))}

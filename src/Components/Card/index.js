@@ -1,9 +1,9 @@
-import { VStack, Text, Heading } from "@chakra-ui/react";
+import { VStack, Text, HStack, Icon } from "@chakra-ui/react";
 
-const Card = ({ name, description, key }) => {
+const Card = ({ name, description, svg, key }) => {
   return (
     <VStack
-      bg="brand.petrol"
+      bg="brand.gray.stoplight"
       p={{ base: "12px", md: "24px" }}
       boxShadow="0px 4px 4px rgba(0, 0, 0, 0.25)"
       borderRadius="15px"
@@ -14,22 +14,26 @@ const Card = ({ name, description, key }) => {
       justifyContent="space-between"
       minHeight="210px"
       maxWidth="360px"
-      color="white"
+      color="rgba(0, 0, 0, 0.9)"
+      text
       _hover={{ bg: "white", color: "brand.petrol" }}
     >
-      <Heading
-        alignSelf="stretch"
-        fontSize="16px"
-        color="inherit"
-        fontWeight="semibold"
-      >
-        {name}
-      </Heading>
+      <HStack justifyContent="space-between" alignItems="flex-end">
+        <Text
+          alignSelf="stretch"
+          fontSize="16px"
+          color="inherit"
+          fontWeight="semibold"
+        >
+          {name}
+        </Text>
+      </HStack>
+
       <Text alignSelf="stretch" color="inherit" fontSize="14px">
         {description}
       </Text>
       <Text
-        color="brand.pink.300"
+        color="brand.petrol"
         fontFamily="Hack"
         textAlign="right"
         alignSelf="stretch"
