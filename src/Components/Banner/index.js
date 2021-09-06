@@ -1,14 +1,10 @@
-import { VStack, Text, HStack } from "@chakra-ui/react";
+import { VStack, Text, Box } from "@chakra-ui/react";
+import { motion } from "framer-motion";
 
 const Banner = () => {
   return (
-    <VStack maxWidth="1500px" alignContent="left" width="100%">
-      <VStack
-        justifyContent="space-evenly"
-        // position="relative"
-        width="100%"
-        spacing="0px"
-      >
+    <VStack maxWidth="1400px" alignContent="left" width="100%">
+      <Box width="100%">
         <Text
           color="white"
           fontSize="48px"
@@ -17,26 +13,26 @@ const Banner = () => {
         >
           SaltConnect
         </Text>
-        <HStack alignSelf="stretch" spacing="5px">
-          <Text fontSize="20px" color="white">
-            Here to help you make integrations
+        <Box>
+          <motion.div></motion.div>
+          <Text fontSize="18px" color="white">
+            Here to help you make integrations{" "}
+            <Text as="strong" fontWeight="bold" color="brand.petrol">
+              simple
+            </Text>
+            .
           </Text>
-          <Text fontSize="20px" fontWeight="extrabold" color="brand.petrol">
-            simple.
-          </Text>
-        </HStack>
-        <HStack alignSelf="stretch" spacing="5px">
-          <Text fontSize="20px" color="white">
-            Find all the documentation that you need to
-          </Text>
-          <Text fontSize="20px" fontWeight="extrabold" color="brand.petrol">
-            revolutionise
-          </Text>
-          <Text fontSize="20px" color="white">
+        </Box>
+        <Box>
+          <Text fontSize="18px" color="white">
+            Find all the documentation that you need to{" "}
+            <Text as="strong" fontWeight="bold" color="brand.petrol">
+              revolutionise{" "}
+            </Text>
             your business.
           </Text>
-        </HStack>
-      </VStack>
+        </Box>
+      </Box>
     </VStack>
   );
 };

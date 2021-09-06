@@ -1,5 +1,4 @@
-import { VStack, Text, Heading, HStack } from "@chakra-ui/react";
-import { Book } from "../Book";
+import { VStack, Text, Heading, HStack, Image } from "@chakra-ui/react";
 
 const LongCard = ({ name, description, svg, key }) => {
   return (
@@ -12,13 +11,14 @@ const LongCard = ({ name, description, svg, key }) => {
       flexGrow={1}
       margin="0px 0px"
       alignItems="flex-start"
+      justifyContent="space-between"
       spacing="12px"
       maxWidth="600px"
       bg="rgba(0, 0, 0, 0.01)"
       _hover={{ bg: "brand.gray.stoplight", color: "brand.petrol" }}
     >
       <HStack alignItems="flex-start" alignSelf="stretch" spacing="24px">
-        <Book width="40px"></Book>
+        <Image width="40px" flexShrink={0} src={svg}></Image>
         <VStack alignSelf="stretch">
           <Heading
             alignSelf="stretch"

@@ -122,11 +122,10 @@ const App = () => {
           <Banner></Banner>
         </VStack>
         <VStack
-          // padding="64px 96px"
           width="100%"
           overflowX="hidden"
           overflowY="auto"
-          p="16px 24px"
+          p="24px 24px"
           maxWidth="1500px"
         >
           <Body></Body>

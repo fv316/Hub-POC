@@ -1,5 +1,4 @@
-import { VStack, Text, HStack } from "@chakra-ui/react";
-import { Book } from "../Book";
+import { VStack, Text, HStack, Image } from "@chakra-ui/react";
 
 const Card = ({ name, description, svg, key }) => {
   return (
@@ -16,7 +15,6 @@ const Card = ({ name, description, svg, key }) => {
       minHeight="210px"
       maxWidth="360px"
       color="rgba(0, 0, 0, 0.9)"
-      text
       _hover={{ bg: "white", color: "brand.petrol" }}
     >
       <HStack
@@ -27,7 +25,7 @@ const Card = ({ name, description, svg, key }) => {
         <Text fontSize="16px" color="inherit" fontWeight="semibold">
           {name}
         </Text>
-        <Book></Book>
+        <Image width="40px" src={svg}></Image>
       </HStack>
 
       <Text alignSelf="stretch" color="inherit" fontSize="14px">
