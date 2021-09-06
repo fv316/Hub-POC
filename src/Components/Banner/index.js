@@ -5,7 +5,7 @@ const Banner = () => {
     <VStack maxWidth="1500px" alignContent="left" width="100%">
       <VStack
         justifyContent="space-evenly"
-        position="relative"
+        // position="relative"
         width="100%"
         spacing="0px"
       >

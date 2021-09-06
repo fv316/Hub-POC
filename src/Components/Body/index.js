@@ -1,4 +1,4 @@
-import { VStack, SimpleGrid, Heading, HStack, Text } from "@chakra-ui/react";
+import { VStack, SimpleGrid, Heading, Text } from "@chakra-ui/react";
 import Card from "../Card";
 import LongCard from "../Card Long";
 
@@ -10,9 +10,8 @@ const cardItems = [
     id: 0,
   },
   {
-    name: "APIs",
-    description:
-      "If you know what you are looking for go staight to our API definitions and begin making funcation calls.",
+    name: "Learn",
+    description: "Starting learning how to code with the Salt Academy.",
     id: 1,
   },
   {
@@ -27,7 +26,7 @@ const longCardItems = [
   {
     name: "Onboarding",
     description:
-      "Onboarding into any of our Salt products. Offer services ranging from acquiring to loyalty to your clients.",
+      "Onboarding into any of our Salt products. Offer services ranging from acquiring to loyalty.",
     id: 0,
   },
   {
@@ -66,7 +65,7 @@ const longCardItems = [
 
 const Body = () => {
   return (
-    <VStack maxWidth="1175px">
+    <VStack maxWidth="1175px" padding="12px 64px">
       <SimpleGrid gap="64px" columns={{ base: 1, md: 1, lg: 3 }}>
         {cardItems.map((card) => (
           <Card
@@ -78,9 +77,9 @@ const Body = () => {
         ))}
       </SimpleGrid>
 
-      <VStack p="64px 0px" alignItems="flex-start" alignSelf="stretch">
+      <VStack p="48px 0px" alignItems="flex-start" alignSelf="stretch">
         <Heading fontSize="36px" fontWeight="extrabold">
-          Salt Products
+          Product Guides
         </Heading>
         <Text>
           The perfect products to make your company <b>boom</b>.

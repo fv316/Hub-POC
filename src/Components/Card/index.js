@@ -1,4 +1,5 @@
-import { VStack, Text, HStack, Icon } from "@chakra-ui/react";
+import { VStack, Text, HStack } from "@chakra-ui/react";
+import { Book } from "../Book";
 
 const Card = ({ name, description, svg, key }) => {
   return (
@@ -18,15 +19,15 @@ const Card = ({ name, description, svg, key }) => {
       text
       _hover={{ bg: "white", color: "brand.petrol" }}
     >
-      <HStack justifyContent="space-between" alignItems="flex-end">
-        <Text
-          alignSelf="stretch"
-          fontSize="16px"
-          color="inherit"
-          fontWeight="semibold"
-        >
+      <HStack
+        justifyContent="space-between"
+        alignItems="flex-end"
+        alignSelf="stretch"
+      >
+        <Text fontSize="16px" color="inherit" fontWeight="semibold">
           {name}
         </Text>
+        <Book></Book>
       </HStack>
 
       <Text alignSelf="stretch" color="inherit" fontSize="14px">

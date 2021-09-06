@@ -1,8 +1,7 @@
-import { ChakraProvider, Icon, VStack } from "@chakra-ui/react";
+import { ChakraProvider, VStack } from "@chakra-ui/react";
 import Navbar from "./Components/Navbar";
 import Banner from "./Components/Banner";
 import Body from "./Components/Body";
-import Sidebar from "./Components/Sidebar";
 import { extendTheme } from "@chakra-ui/react";
 import "focus-visible/dist/focus-visible";
 // import "@fontsource/manrope";
@@ -121,10 +120,9 @@ const App = () => {
           bg="brand.blue.500"
         >
           <Banner></Banner>
-          <Icon src="../../Images/noun_application programming interface_2307579.svg.svg"></Icon>
         </VStack>
         <VStack
-          padding="64px 96px"
+          // padding="64px 96px"
           width="100%"
           overflowX="hidden"
           overflowY="auto"
