@@ -31,7 +31,7 @@ const longCardItems = [
     description:
       "Onboarding into any of our Salt products. Offer services ranging from acquiring to loyalty.",
     id: 0,
-    svg: "/images/noun_destination_2189276.svg",
+    svg: "/images/noun_a direction sign_2233939.svg",
   },
   {
     name: "Terminal Transactions",
@@ -66,7 +66,7 @@ const longCardItems = [
     description:
       "Stream all of the accounting data directly to your personal platform.",
     id: 5,
-    svg: "/images/noun_application programming interface_2307579.svg",
+    svg: "/images/noun_balance_4162563.svg",
   },
 ];
 

@@ -1,5 +1,3 @@
-import { Heading } from "@chakra-ui/react";
-
 const Logo = ({ height, color = "currentColor" }) => (
   <svg
     height={height || "40px"}
@@ -17,10 +15,4 @@ const Logo = ({ height, color = "currentColor" }) => (
   </svg>
 );
 
-const LogoAlternative = ({ width, color = "currentColor", ...props }) => (
-  <Heading fontWeight={800} width={width} color={color} {...props}>
-    Salt
-  </Heading>
-);
-
-export { Logo, LogoAlternative };
+export { Logo };

@@ -4,7 +4,7 @@ const LongCard = ({ name, description, svg, key }) => {
   return (
     <VStack
       p="24px"
-      boxShadow="0px 4px 4px rgba(0, 0, 0, 0.1)"
+      boxShadow="md"
       boxSizing="border-box"
       borderRadius="15px"
       alignSelf="stretch"
@@ -18,7 +18,7 @@ const LongCard = ({ name, description, svg, key }) => {
       _hover={{ bg: "brand.gray.stoplight", color: "brand.petrol" }}
     >
       <HStack alignItems="flex-start" alignSelf="stretch" spacing="24px">
-        <Image width="40px" flexShrink={0} src={svg}></Image>
+        <Image width="50px" flexShrink={0} src={svg}></Image>
         <VStack alignSelf="stretch">
           <Heading
             alignSelf="stretch"

@@ -1,12 +1,11 @@
-import { ChakraProvider, VStack } from "@chakra-ui/react";
-import Navbar from "./Components/Navbar";
-import Banner from "./Components/Banner";
-import Body from "./Components/Body";
+import { ChakraProvider } from "@chakra-ui/react";
 import { extendTheme } from "@chakra-ui/react";
 import "focus-visible/dist/focus-visible";
+import { Documentation } from "./Components/Documentation";
+import { Home } from "./Components/Home";
 // import "@fontsource/manrope";
-import { StoplightProject } from "@stoplight/elements-dev-portal";
 import "./stoplight.css";
+import { BrowserRouter, Route } from "react-router-dom";
 
 // if this gets long export this to another folder with subfiles
 const theme = extendTheme({
@@ -103,38 +102,10 @@ const theme = extendTheme({
 const App = () => {
   return (
     <ChakraProvider theme={theme}>
-      <VStack
-        alignItems="center"
-        flexGrow={1}
-        display="flex"
-        height="100%"
-        width="100%"
-        spacing="0px"
-      >
-        <Navbar></Navbar>
-        <VStack
-          padding="64px 96px"
-          width="100%"
-          overflowX="hidden"
-          overflowY="auto"
-          bg="brand.blue.500"
-        >
-          <Banner></Banner>
-        </VStack>
-        <VStack
-          width="100%"
-          overflowX="hidden"
-          overflowY="auto"
-          p="24px 24px"
-          maxWidth="1500px"
-        >
-          <Body></Body>
-        </VStack>
-      </VStack>
-      <StoplightProject
-        collapseTableOfContents="true"
-        projectId="cHJqOjM1Nzk5"
-      />
+      <BrowserRouter>
+        <Route path="/" exact={true} render={() => <Home />} />
+        <Route path="/docs" render={() => <Documentation />} />
+      </BrowserRouter>
     </ChakraProvider>
   );
 };

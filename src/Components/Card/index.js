@@ -5,7 +5,7 @@ const Card = ({ name, description, svg, key }) => {
     <VStack
       bg="brand.gray.stoplight"
       p={{ base: "12px", md: "24px" }}
-      boxShadow="0px 4px 4px rgba(0, 0, 0, 0.25)"
+      boxShadow="md"
       borderRadius="15px"
       alignSelf="stretch"
       flexGrow={1}
